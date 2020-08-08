@@ -27,7 +27,7 @@ toolchain(){
   if [ ! -d $PARENT_DIR/aarch64-linux-android-4.9 ]; then
     pause 'clone Toolchain aarch64-linux-android-4.9 cross compiler'
     git clone https://android.googlesource.com/PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 $PARENT_DIR/aarch64-linux-android-4.9
-    . $DIR/build_kernel.sh
+    . $DIR/build_menu.sh
   fi
 }
 
@@ -35,7 +35,7 @@ llvm(){
   if [ ! -d $PARENT_DIR/llvm-arm-toolchain-ship_8.0.6 ]; then
     pause 'clone Snapdragon LLVM ARM Compiler 8.0'
     git clone https://github.com/zhuec/android_vendor_qcom_proprietary_llvm-arm-toolchain-ship_8.0.6 $PARENT_DIR/llvm-arm-toolchain-ship_8.0.6
-    . $DIR/build_kernel.sh
+    . $DIR/build_menu.sh
   fi
 }
 
